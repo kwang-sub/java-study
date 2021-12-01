@@ -10,10 +10,12 @@ public class ParallelExample {
                 "1", "2", "3", "4", "5"
         );
 
-
+//        순차처리 Stream
         Stream<String> stream = list.stream();
         stream.forEach(ParallelExample :: print);
 
+        System.out.println();
+//         병렬처리 Stream
         Stream<String> parallelStream = list.parallelStream();
         parallelStream.forEach(ParallelExample::print);
     }
